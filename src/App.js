@@ -3,15 +3,9 @@ import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/New Expense/NewExpense';
 import Banner from './components/UI/Banner';
 
-const DUMMY_EXPENSES = [
-  { id: 'e1', title: "Car Title", date: new Date(2021, 2, 28), amount: 284.64 },
-  { id: 'e2', title: "Food", date: new Date(2021, 2, 28), amount: 284.64 },
-  { id: 'e3', title: "Gas", date: new Date(2021, 2, 28), amount: 284.64 }
-];
-
 function App() {
 
-  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+  const [expenses, setExpenses] = useState([]);
 
   function addExpenseHandler(expense){
     setExpenses(prevExpenses => {
